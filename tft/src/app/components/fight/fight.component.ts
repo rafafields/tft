@@ -3,14 +3,14 @@ import { Unit } from '../../models/unit.model';
 
 @Component({
   selector: 'app-fight',
-  imports: [],
+  standalone: true,
   templateUrl: './fight.component.html',
   styleUrl: './fight.component.scss'
 })
 export class FightComponent {
 
-  unit1 = new Unit('Unit 1', 180, 10, 5, 1, 0.95);
-  unit2 = new Unit('Unit 2', 100, 15, 7, 1.25, 0.85);
+  unit1 = new Unit({name: 'Unit 1', health: 200, attack: 10, defense: 10, precision: 1.25});
+  unit2 = new Unit({name: 'Unit 2', health: 100, attack: 30, defense: 5, precision: 8.25});
 
   fightInterval: NodeJS.Timeout = (null as unknown) as NodeJS.Timeout;
 

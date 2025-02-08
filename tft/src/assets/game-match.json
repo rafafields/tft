@@ -1,0 +1,16 @@
+{
+    "players": [
+        {
+            "id": 1,
+            "name": "Player 1",
+            "gold": 0,
+            "board": [1,2,1,2]
+        },
+        {
+            "id": 2,
+            "name": "Player 2",
+            "gold": 0,
+            "board": [1,2,2,1]
+        }
+    ]
+}

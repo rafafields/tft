@@ -8,11 +8,14 @@ export class Cell{
     type: string;
     unit: Unit | null;
 
-    constructor(id:number, x: number, y: number, type: string, unit: Unit | null){
-        this.id = id;
-        this.x = x;
-        this.y = y;
-        this.type = type;
-        this.unit = unit;
+    constructor(init?:Partial<Cell>){     
+        this.id = 0;
+        this.x = 0;
+        this.y = 0;
+        this.type = '';
+        this.unit = null;
+
+        if(init == null) return;
+        Object.assign(this, init);
     }
 }

@@ -5,6 +5,7 @@ import { Cell } from '../../models/cell.model';
 
 @Component({
   selector: 'app-map',
+  standalone: true,
   imports: [CellComponent],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss',
@@ -21,8 +22,7 @@ export class MapComponent implements OnInit {
     let iterator = 0;
     for(let i = 0; i < 8; i++){
       for(let j = 0; j < 8; j++){
-        // const cell = new Cell(iterator, i, j, 'grass', new Unit('Unit 1', 180, 10, 5, 1, 0.95));
-        const cell = new Cell(iterator, i, j, 'grass', null);
+        const cell = new Cell({id: iterator, x: i, y: j, type: 'grass'});
         this.map.push(cell);
         iterator++;
       }

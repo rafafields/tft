@@ -3,7 +3,6 @@ import { Cell } from '../../../models/cell.model';
 
 @Component({
   selector: 'app-cell',
-  imports: [],
   standalone: true,
   templateUrl: './cell.component.html',
   styleUrl: './cell.component.scss'
