@@ -1,7 +1,12 @@
-@for (unit of units; track unit.id){
-<div>
-    {{unit.name}}
+<div class="actions">
+    <button (click)="onBuyExperience()">Buy Experience</button>
 </div>
-} @empty {
-{{'No units on the board'}}
-}
+<div class="board">
+    @for (unit of units; track unit.id){
+    <div>
+        {{unit.name}}
+    </div>
+    } @empty {
+    {{'No units on the board'}}
+    }
+</div>

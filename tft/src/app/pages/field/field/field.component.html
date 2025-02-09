@@ -1,6 +1,8 @@
-<app-fight></app-fight>
-<app-map></app-map>
-<!-- <app-board [data]="boardData"></app-board> -->
- <code>
-    <pre>{{units[0].name}}</pre>
- </code>
+@if(loaded()){
+   <app-fight></app-fight>
+   <app-board [data]="enemyBoard"></app-board>
+   <app-map></app-map>
+   <app-board [data]="playerBoard" (buyedExperience)="onBuyedExperience($event)"></app-board>
+}@else {
+   Loading...
+}
